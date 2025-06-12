@@ -10,7 +10,7 @@ public class WriteToFile {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             for (String line : lines) {
                 writer.write(line);
-                writer.newLine(); // adds a line break
+                writer.newLine(); 
             }
             System.out.println("Successfully written to " + filename);
         } catch (IOException e) {
