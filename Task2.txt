@@ -1,0 +1,31 @@
+package Day1.corejava;
+import java.util.Scanner;
+
+public class Task2{
+//simple interest//
+	public static void main(String[] args)
+	{
+		double i,simpleint;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter The Amount:");
+		double amt=s.nextDouble();
+		Scanner a = new Scanner(System.in);
+		System.out.println("Enter The Rate:");
+		double rate=s.nextDouble();
+		Scanner t = new Scanner(System.in);
+		System.out.println("Enter The Time:");
+		double time=s.nextDouble();
+	    i=(amt*rate*time)/100;
+	    if(amt<=0 || rate<=0 || time<=0)
+	    {
+	    	System.out.println("Error , Enter the valid amount");
+	    }
+	    else
+	    {
+		System.out.printf("Simple interest:%f",i);
+	    }
+	    s.close();
+	    a.close();
+	    t.close();
+	}
+}

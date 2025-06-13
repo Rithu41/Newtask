@@ -1,0 +1,44 @@
+package hometask;
+import java.util.Scanner;
+
+public class StudentGrade 
+{
+		public static void main(String[] args) 
+		{
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter name of the Student:");  
+        String name = scan.nextLine();
+        System.out.print("Enter student's mark: ");
+        float mark = scan.nextFloat();
+        String grade = calculateGrade(mark);
+        System.out.println("Grade: " + grade);
+        scan.close();
+        }
+        public static String calculateGrade(float mark) 
+        {
+        if(mark >= 90)
+        {
+          return "A+";
+        }
+        else if (mark >= 80) 
+        {
+          return "A";
+        }
+        else if (mark >= 70)
+        {
+           return "B";
+        }
+        else if (mark >= 60)
+        {
+          return "C";
+        }
+        else if (mark >= 50) 
+        {
+          return "D";
+        } 
+        else
+        {
+          return "F";
+        }
+    }
+}

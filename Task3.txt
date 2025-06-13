@@ -1,0 +1,28 @@
+package Day1.corejava;
+
+import java.util.Scanner;
+
+//Leap year//
+public class Task3
+{
+	public static boolean isLeapYear(int yr)
+	{
+		return (yr % 4 == 0 && yr % 100 != 0) || (yr % 400 == 0);
+	}
+
+	public static void main(String[] args)
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter a year:");
+		int yr = s.nextInt();
+		s.close();
+		
+		if (isLeapYear(yr))
+		{
+			System.out.printf("%d is a leap year", yr);
+		} else
+		{
+			System.out.printf("%d is not a leap year", yr);
+		}
+	}
+}
